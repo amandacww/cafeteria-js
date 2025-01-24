@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma - Café & Cookies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <span>Aroma</span>
+            </div>
+            <div class="nav-items">
+                <a href="#menu">Menu</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Nosso Menu</h2>
+            <div class="menu-container">
+                <div class="menu-section" id="bebidas">
+                    <h3>Bebidas</h3>
+                    <div class="items-grid"></div>
+                </div>
+                <div class="menu-section" id="cookies">
+                    <h3>Cookies</h3>
+                    <div class="items-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="section-container">
+            <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <p>Bem-vindo ao Aroma! Aqui, cada xícara é feita com amor e cuidado, trazendo o melhor grão para o seu dia. Somos apaixonados por café de qualidade e acreditamos que momentos simples podem ser especiais.</p>
+                <p>Nossa missão é oferecer um espaço acolhedor onde você possa relaxar, conversar e saborear aquele café quentinho que traz aconchego.</p>
+                <p>Venha tomar um café com a gente e fazer parte dessa experiência!</p>
+            </div>
+        </section>
+
+        <section id="contato" class="section-container">
+            <h2>Contato</h2>
+            <div class="contact-content">
+                <p>Adoramos ouvir de você! Se tiver alguma dúvida, sugestão ou quiser saber mais sobre nossas delícias, fique à vontade para entrar em contato conosco.</p>
+                
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Endereço: Cafeteria Aroma - Centro</p>
+                    <p><i class="fas fa-phone"></i> Telefone: (63) 99999 - 9999</p>
+                    <p><i class="fas fa-envelope"></i> E-mail: cafeteriaaroma@gmail.com</p>
+                </div>
+
+                <div class="social-media">
+                    <h3>Siga-nos nas redes sociais</h3>
+                    <p><i class="fab fa-instagram"></i> Instagram: @aromacoffe</p>
+                    <p><i class="fab fa-twitter"></i> X: @aromacoffe</p>
+                </div>
+
+                <p class="closing-text">Estamos sempre por aqui para uma conversa ou para te deixar por dentro das novidades! ☕💬</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h3>Seu Carrinho</h3>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="payment-options">
+                <h4>Forma de Pagamento:</h4>
+                <select id="payment-method">
+                    <option value="pix">PIX</option>
+                    <option value="card">Cartão</option>
+                    <option value="cash">Dinheiro</option>
+                </select>
+                <button id="checkout-btn">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pix-modal" class="modal">
+        <div class="modal-content">
+            <h3>Pagamento via PIX</h3>
+            <div id="qr-code"></div>
+            <p>Escaneie o QR Code para pagar</p>
+            <button onclick="document.getElementById('pix-modal').style.display='none'">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
